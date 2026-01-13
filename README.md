@@ -4,6 +4,8 @@
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
+[English](./README.md) | [简体中文](./README.zh-CN.md) | [Français](./README.fr.md)
+
 **QRCode2Link** is a modern, privacy-focused web application that instantly decodes QR codes from images into clickable links. It runs entirely in your browser, ensuring your data never leaves your device.
 
 ## ✨ Features
