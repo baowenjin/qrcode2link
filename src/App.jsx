@@ -36,6 +36,40 @@ const translations = {
     copied: 'Copied!',
     open: 'Open Link',
     footer: '© 2026 QR2Link. Runs entirely in your browser.'
+  },
+  fr: {
+    titlePrefix: 'QR vers ',
+    titleGradient: 'Lien',
+    subtitle: 'Décodez instantanément les codes QR en liens.',
+    dragDrop: 'Glisser-déposer ou ',
+    clickUpload: 'Cliquer pour télécharger',
+    pasteHintTitle: '💡 Astuce Pro',
+    pasteHint: 'Pas besoin de sauvegarder ! Capturez et collez (Ctrl+V / Cmd+V) directement.',
+    scanning: 'Scan en cours...',
+    errorImage: 'Veuillez télécharger une image.',
+    errorQR: 'Aucun code QR trouvé dans l\'image.',
+    decodedLink: 'Lien décodé :',
+    copy: 'Copier le lien',
+    copied: 'Copié !',
+    open: 'Ouvrir le lien',
+    footer: '© 2026 QR2Link. Fonctionne entièrement dans votre navigateur.'
+  },
+  ja: {
+    titlePrefix: 'QRコードを',
+    titleGradient: 'リンクへ',
+    subtitle: 'QRコードを即座にリンクに変換します。',
+    dragDrop: 'ドラッグ＆ドロップ または ',
+    clickUpload: 'クリックしてアップロード',
+    pasteHintTitle: '💡 ヒント',
+    pasteHint: '保存は不要です！スクリーンショットを撮って貼り付ける（Ctrl+V / Cmd+V）だけです。',
+    scanning: 'スキャン中...',
+    errorImage: '画像ファイルをアップロードしてください。',
+    errorQR: '画像内にQRコードが見つかりませんでした。',
+    decodedLink: 'デコードされたリンク：',
+    copy: 'リンクをコピー',
+    copied: 'コピーしました！',
+    open: 'リンクを開く',
+    footer: '© 2026 QR2Link. ブラウザ上でローカルに動作します。'
   }
 }
 
@@ -143,14 +177,29 @@ function App() {
   }
 
   const toggleLang = () => {
-    setLang(prev => prev === 'zh' ? 'en' : 'zh')
+    const langs = ['zh', 'en', 'fr', 'ja']
+    setLang(prev => {
+      const currentIndex = langs.indexOf(prev)
+      const nextIndex = (currentIndex + 1) % langs.length
+      return langs[nextIndex]
+    })
+  }
+
+  const getLangLabel = (currentLang) => {
+    const labels = {
+      zh: 'English',
+      en: 'Français',
+      fr: '日本語',
+      ja: '中文'
+    }
+    return labels[currentLang]
   }
 
   return (
     <div className="app-container">
       <div className="lang-switch">
         <button onClick={toggleLang} className="lang-btn">
-          {lang === 'zh' ? 'English' : '中文'}
+          {getLangLabel(lang)}
         </button>
       </div>
 
