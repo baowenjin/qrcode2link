@@ -176,31 +176,33 @@ function App() {
     }, 2000)
   }
 
-  const toggleLang = () => {
-    const langs = ['zh', 'en', 'fr', 'ja']
-    setLang(prev => {
-      const currentIndex = langs.indexOf(prev)
-      const nextIndex = (currentIndex + 1) % langs.length
-      return langs[nextIndex]
-    })
-  }
-
-  const getLangLabel = (currentLang) => {
-    const labels = {
-      zh: 'English',
-      en: 'Français',
-      fr: '日本語',
-      ja: '中文'
-    }
-    return labels[currentLang]
-  }
-
   return (
     <div className="app-container">
       <div className="lang-switch">
-        <button onClick={toggleLang} className="lang-btn">
-          {getLangLabel(lang)}
-        </button>
+        {['zh', 'en', 'fr', 'ja'].map((l) => (
+          <button
+            key={l}
+            onClick={() => setLang(l)}
+            className={`lang-btn ${lang === l ? 'active' : ''}`}
+            style={{
+              margin: '0 0.5rem',
+              opacity: lang === l ? 1 : 0.6,
+              fontWeight: lang === l ? 'bold' : 'normal',
+              textDecoration: lang === l ? 'underline' : 'none',
+              background: 'transparent',
+              border: 'none',
+              cursor: 'pointer',
+              color: 'var(--text-primary)',
+              fontSize: '0.9rem',
+              padding: '0.2rem'
+            }}
+          >
+            {l === 'zh' && '中文'}
+            {l === 'en' && 'English'}
+            {l === 'fr' && 'Français'}
+            {l === 'ja' && '日本語'}
+          </button>
+        ))}
       </div>
 
       <div className="hero">
