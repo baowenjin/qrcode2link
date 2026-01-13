@@ -1,71 +1,100 @@
 # QRCode2Link
 
-![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
+<div align="center">
+  <h1>QRCode2Link</h1>
+  <p>
+    <strong>Décodez instantanément les codes QR en liens cliquables directement dans votre navigateur.</strong>
+  </p>
+  
+  <p>
+    <a href="https://qrcode2link.vercel.app">
+      <img src="https://img.shields.io/badge/D%C3%A9mo_Live-Visiter-success?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
+    </a>
+  </p>
 
-[English](./README.md) | [简体中文](./README.zh-CN.md) | [Français](./README.fr.md)
+  <p>
+    <a href="https://github.com/baowenjin/qrcode2link/blob/main/LICENSE">
+      <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License" />
+    </a>
+    <img src="https://img.shields.io/badge/Confidentialit%C3%A9-Local_Uniquement-blue?style=flat-square" alt="Privacy First" />
+    <img src="https://img.shields.io/badge/v1.0.0-Stable-orange?style=flat-square" alt="Version" />
+  </p>
 
-**QRCode2Link** est une application web moderne et respectueuse de la vie privée qui décode instantanément les codes QR à partir d'images en liens cliquables. Elle fonctionne entièrement dans votre navigateur, garantissant que vos données ne quittent jamais votre appareil.
+  <p>
+    <a href="./README.md">English</a> | 
+    <a href="./README.zh-CN.md">简体中文</a> | 
+    <a href="./README.fr.md">Français</a>
+  </p>
+</div>
 
-## ✨ Fonctionnalités
+---
 
-- **🚀 Décodage instantané** : Glissez-déposez ou téléchargez n'importe quelle image contenant un code QR.
-- **📋 Support du presse-papier** : Faites simplement une capture d'écran et collez (Ctrl+V / Cmd+V) pour décoder immédiatement.
-- **🔒 Priorité à la confidentialité** : Tout le traitement est effectué localement à l'aide de `jsQR`. **Aucune image n'est téléchargée sur un serveur.**
-- **🌍 Interface bilingue** : Basculez sans effort entre l'anglais et le chinois.
-- **🎨 Design moderne** : Dispose d'une interface utilisateur élégante en verre (glassmorphism) avec des animations réactives.
+## 🚀 Introduction
 
-## 🛠️ Stack Technique
+**QRCode2Link** est un outil web léger et respectueux de la vie privée conçu pour résoudre un problème simple : extraire des liens à partir d'images de codes QR sur votre ordinateur sans avoir à prendre votre téléphone.
 
-- [React 19](https://react.dev/) - La bibliothèque pour les interfaces utilisateur web et natives
-- [Vite](https://vitejs.dev/) - Outillage Frontend de Nouvelle Génération
-- [jsQR](https://github.com/cozmo/jsQR) - Une bibliothèque de lecture de codes QR en pur JavaScript
+Contrairement à de nombreux outils en ligne qui téléchargent vos images sur un serveur distant pour les traiter, **QRCode2Link fonctionne à 100 % localement dans votre navigateur**. Vos images et données ne quittent jamais votre appareil, garantissant une confidentialité et une sécurité totales.
 
-## 🚀 Pour Commencer
+### Pourquoi utiliser QRCode2Link ?
 
-Pour exécuter ce projet localement, suivez ces étapes :
+- **🔒 Priorité à la confidentialité** : Construit avec `jsQR`, tout le décodage se fait dans la mémoire de votre navigateur. Pas de suivi, pas de téléchargement.
+- **⚡️ Ultra Rapide** : Résultats instantanés sans latence serveur.
+- **📋 Intégration du presse-papier** : Prise en charge du collage direct d'images (Ctrl+V) — parfait pour les captures d'écran.
+- **🌍 Prêt pour le monde** : Entièrement localisé en anglais, chinois (simplifié), français et japonais.
+
+## 🎯 Fonctionnalités Clés
+
+| Fonctionnalité | Description |
+| :--- | :--- |
+| **Glisser-Déposer** | Glissez simplement n'importe quel fichier image contenant un code QR sur l'interface. |
+| **Coller pour Décoder** | Faites une capture d'écran et collez-la directement. Pas besoin de sauvegarder les fichiers d'abord. |
+| **Liens Instantanés** | Détecte automatiquement les URL et fournit un bouton "Ouvrir" ou "Copier" en un clic. |
+| **UI Réactive** | Un design moderne en verre (glassmorphism) qui fonctionne sur ordinateur et mobile. |
+
+## 🛠 Stack Technique
+
+Ce projet est construit avec des technologies web modernes pour la performance et la maintenabilité :
+
+- **[React 19](https://react.dev/)** : La dernière version de la bibliothèque pour les interfaces web et natives.
+- **[Vite](https://vitejs.dev/)** : Outillage frontend de nouvelle génération pour des builds ultra-rapides.
+- **[jsQR](https://github.com/cozmo/jsQR)** : Une bibliothèque de lecture de codes QR en JavaScript pur et robuste.
+
+## 💻 Développement
+
+Vous voulez exécuter ceci localement ou contribuer ?
 
 ### Prérequis
+- Node.js (v16+)
+- npm ou yarn
 
-Assurez-vous d'avoir [Node.js](https://nodejs.org/) (version 16 ou ultérieure) installé sur votre machine.
+### Démarrage Rapide
 
-### Installation
-
-1. Clonez le dépôt :
+1. **Cloner le dépôt**
    ```bash
    git clone https://github.com/baowenjin/qrcode2link.git
    cd qrcode2link
    ```
 
-2. Installez les dépendances :
+2. **Installer les dépendances**
    ```bash
    npm install
    ```
 
-3. Démarrez le serveur de développement :
+3. **Lancer le serveur de développement**
    ```bash
    npm run dev
    ```
 
-4. Ouvrez votre navigateur et visitez `http://localhost:5173`.
+4. Ouvrez `http://localhost:5173` pour voir l'application.
 
-## 📦 Construction et Déploiement
+## 🚢 Déploiement
 
-Pour construire le projet pour la production :
+Le projet est optimisé pour le déploiement sur **Vercel**.
 
-```bash
-npm run build
-```
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbaowenjin%2Fqrcode2link)
 
-### Déployer sur Vercel
-
-Ce projet est optimisé pour le déploiement sur Vercel.
-
-1. Poussez votre code vers un dépôt GitHub.
-2. Importez le projet dans Vercel.
-3. Vercel détectera automatiquement les paramètres Vite et déploiera votre site.
+Connectez simplement votre dépôt GitHub à Vercel, et il détectera automatiquement les paramètres.
 
 ## 📄 Licence
 
-Ce projet est sous licence MIT. N'hésitez pas à l'utiliser et à le modifier pour vos propres projets.
+Ce projet est open-source sous la [Licence MIT](LICENSE).
